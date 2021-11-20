@@ -1,0 +1,36 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    #listview {
+        margin-top: 12px;
+    }
+    
+    .alumno {
+        border-bottom: 1px black solid;
+        padding: 12px 12px;
+        font-size: 32px;
+        font-family: monospace;
+        list-style: none;
+        background-color: beige;
+    }
+    /*-----LoginStyles-----*/
+    
+    .bodylogin {
+        background-color: rgb(48, 44, 109);
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .divlogin {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-content: center;
+        width: 20%;
+    }

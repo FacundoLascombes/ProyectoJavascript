@@ -1,6 +1,6 @@
-document.getElementById("calcular").addEventListener("click",
-    calcularPromedio);
+document.getElementById("calcular").addEventListener("click", calcularPromedio);
 document.getElementById("limpiarStorage").addEventListener("click", limpiarStorage);
+
 
 /*----------------Clase Alumno----------------*/
 
@@ -13,6 +13,7 @@ class alumno {
         this.estado = estado;
     }
 }
+
 
 /*----------------Guardar Alumno----------------*/
 
@@ -93,6 +94,12 @@ function calcularPromedio(nota1, nota2, nota3) {
         listarAlumnos();
     }
 }
+
+// function listatop() {
+//     for (let l = 0; l < length0fObject; l++) {
+
+//     }
+// }
 
 function limpiarStorage() {
     console.log('cleaning local storage');
