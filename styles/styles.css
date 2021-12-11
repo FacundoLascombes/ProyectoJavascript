@@ -86,7 +86,7 @@
         display: flex;
         margin-top: 28px;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
     }
     
     a {
@@ -151,4 +151,17 @@
         color: white;
         text-transform: uppercase;
         font-family: sans-serif;
+    }
+    
+    .clima {
+        display: flex;
+        background-color: white;
+        border-radius: 10px;
+        padding-right: 70px;
+    }
+    
+    .infoclima {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }

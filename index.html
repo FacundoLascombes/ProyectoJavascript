@@ -28,12 +28,20 @@
 
     <div class="logoCampus">
         <img src="../images/logo-campus.png" alt="">
+        <div class="clima">
+            <img id="icon-clima" src="" alt="">
+            <div class="infoclima">
+                <p id="ciudad"> </p>
+                <p id="cielo"> </p>
+                <p id="temp"> </p>
+            </div>
+        </div>
     </div>
-
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="javascript/loginRegister.js"></script>
     <script src="javascript/cerrarSesion.js"></script>
+    <script src="javascript/clima-ajax.js"></script>
 
     <script>
         var bandera = localStorage.getItem("bandera");
