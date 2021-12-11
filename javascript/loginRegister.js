@@ -6,6 +6,11 @@ var usuarios = [];
 
 var usuarios_local = localStorage.getItem('users');
 usuarios_local = JSON.parse(usuarios_local);
+var bandera = 0;
+
+if (bandera = 0) {
+    $("#iniciado").css('visibility', 'hidden');
+}
 
 class usuario {
     constructor(user, contras) {
@@ -56,11 +61,15 @@ function login() {
 
     for (let q = 0; q < usuarios_length; q++) {
         if (nombrusuario == usuarios[q].user && contra == usuarios[q].contras) {
-            window.location.href = './html/desafioJavascript.html';
             bandera = 1;
         }
     }
+
+    if (bandera == 1) {
+        localStorage.setItem("bandera", bandera);
+        window.location.href = '/index.html';
+    }
     if (bandera == 0) {
-        alert('Nombre de usuario o contraseña incorrectos');
+        alert("Usuario y/o contrasena incorrectos");
     }
 }

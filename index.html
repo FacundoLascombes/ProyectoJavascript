@@ -1,35 +1,46 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/styles.css">
-    <title>Document</title>
+    <title>Principal</title>
+    <link rel="stylesheet" href="/styles/styles.css">
 </head>
 
-<body class="bodylogin">
-    <h1>Bienvenido a nuestro campus virutal</h1>
+<body style="background-image: url(../images/Imagen-de-fondo-html.jpg);">
 
-    <h2>Porfavor antes de continuar debe iniciar sesion</h2>
+    <div class="bodyPagPrinc">
+        <div class="section2pagPrinc">
+            <h1 style="font-size: 6vh; color: white; text-align: center;">Facultad Regional</h1>
 
-    <div class="divlogin">
-        <br>
-        <label for="usuar" style="color: white;"> Usuario </label>
-        <input type="text" name="usuar" id="usuar">
-        <br>
+            <img src="../images/01-Facultad.jpg" alt="" style="border-radius: 30px; height: 70vh;">
+        </div>
 
-        <br>
-        <label for="pass" style="color: white;"> Contrasena </label>
-        <input type="password" name="pass" id="pass">
-        <br>
+        <div class="sectionpagPrinc">
+            <button class="botones" id="iniciado"> <a href="/html/materias.html"> Materias </a> </button>
+            <button class="botones" id="iniciad"> <a href="/html/desafioJavascript.html"> Nuestros Alumnos </a> </button>
+            <button class="botones"> <a href="/html/login.html"> Iniciar sesion </a> </button>
+        </div>
     </div>
 
-    <input type="button" name="" id="iniciar" value="Iniciar sesion">
-    <input type="button" name="" id="registrar" value="Registrar Usuario">
+    <div class="logoCampus">
+        <img src="../images/logo-campus.png" alt="">
+    </div>
 
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="javascript/loginRegister.js"></script>
+
+    <script>
+        var bandera = localStorage.getItem("bandera");
+        if (bandera == 1) {
+            $('#iniciado').css('visibility', 'visible');
+            $('#iniciad').css('visibility', 'visible');
+        }
+    </script>
+
 </body>
 
 </html>
