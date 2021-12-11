@@ -138,6 +138,17 @@
         visibility: hidden;
     }
     
+    #cerrarSesion {
+        visibility: hidden;
+    }
+    
     .bodyMaterias {
         background-image: url(../images/Imagen-de-fondo-html.jpg);
+    }
+    
+    .titulo {
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+        font-family: sans-serif;
     }

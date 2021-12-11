@@ -1,6 +1,7 @@
 var alumnos = [];
 var i = 0;
 var local_alumnos = localStorage.getItem('datos');
+var top_alumnos = 6;
 local_alumnos = JSON.parse(local_alumnos);
 
 var x = (local_alumnos.length);
@@ -18,11 +19,17 @@ for (let i = 0; i < local_alumnos.length; i++) {
     console.log(auxiliar);
 }
 
-
 $.each(local_alumnos, function(i, value) {
     $('ul.listaAlumnos').append("<li> Nombre: " + value.nombre + " - Apellido: " + value.apellido + " - Documento: " + value.documento + " - " + value.estado + " - Nota: " + value.promedio + "</li>");
 
-    if (i == 2) {
-        $('ul.listaAlumnos').append("<h1 style = 'text-align: center;'> Top 3 mejores alumnos del curso </h1>");
+    if (i == top_alumnos - 1) {
+        $(`li:nth-child(${top_alumnos})`).css("margin-bottom", "50px");
     }
 })
+
+if (local_alumnos.length >= 1 && local_alumnos.length <= top_alumnos) {
+    console.log(local_alumnos.length);
+    $('header').after("<h1 class = 'titulo';> Estos " + local_alumnos.length + " Alumnos estan en el Top </h1>");
+} else {
+    $('header').after("<h1 class = 'titulo';> Estos " + top_alumnos + " Alumnos estan en el Top </h1>");
+}

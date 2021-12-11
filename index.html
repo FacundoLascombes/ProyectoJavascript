@@ -21,6 +21,7 @@
         <div class="sectionpagPrinc">
             <button class="botones" id="iniciado"> <a href="/html/materias.html"> Materias </a> </button>
             <button class="botones" id="iniciad"> <a href="/html/desafioJavascript.html"> Nuestros Alumnos </a> </button>
+            <button class="botones" id="cerrarSesion"> Cerrar Sesion </button>
             <button class="botones"> <a href="/html/login.html"> Iniciar sesion </a> </button>
         </div>
     </div>
@@ -32,12 +33,14 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="javascript/loginRegister.js"></script>
+    <script src="javascript/cerrarSesion.js"></script>
 
     <script>
         var bandera = localStorage.getItem("bandera");
         if (bandera == 1) {
             $('#iniciado').css('visibility', 'visible');
             $('#iniciad').css('visibility', 'visible');
+            $('#cerrarSesion').css('visibility', 'visible');
         }
     </script>
 
