@@ -5,7 +5,7 @@ document.getElementById("limpiarStorage").addEventListener("click", limpiarStora
 /*----------------Clase Alumno----------------*/
 
 class alumno {
-    constructor(nombre, apellido, documento, promedio, estado, materia) {
+    constructor(nombre, apellido, documento, promedio, estado, materia = []) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.documento = documento;
@@ -52,6 +52,9 @@ function createList() {
 }
 
 function calcularPromedio(nota1, nota2, nota3) {
+
+    k = 0;
+
     console.log('calculating average');
 
     var nota1 = parseInt(document.getElementById("n1").value);
@@ -74,13 +77,27 @@ function calcularPromedio(nota1, nota2, nota3) {
         nombre = String(document.getElementById("nomb").value);
         apellido = String(document.getElementById("ape").value);
         documento = parseInt(document.getElementById("doc").value);
-        materia = String(document.getElementById("mater").value);
+        var k = 0;
+
+        ayuda = document.querySelectorAll(".valores");
+        var ayuda2 = [];
+
+        ayuda.forEach((e) => {
+            if (e.checked == true) {
+                console.log(e.value);
+                ayuda2[k] = e.value;
+                console.log(ayuda2);
+                k++
+            }
+        });
+
+        materia = ayuda2;
+        console.log(materia);
 
         alumnos[i] = new alumno(nombre, apellido, documento, promedio, estado, materia);
 
         localStorage.setItem('datos', JSON.stringify(alumnos));
         i++;
-        listarAlumnos();
     }
 }
 
